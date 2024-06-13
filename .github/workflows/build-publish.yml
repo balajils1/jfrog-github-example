@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
           DOCKER_REPO: 'pruthvi-docker'
-          IMAGE_NAME: 'library/nginx:${{ github.run_number }}'
+          IMAGE_NAME: 'library/nginx:latest'
           JF_URL: https://${{ secrets.JF_URL }}/
         steps:
             - name: Any Name Bash Test Step
