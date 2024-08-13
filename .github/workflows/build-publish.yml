@@ -77,14 +77,14 @@ jobs:
                 use: true
                 platforms: linux/amd64,linux/arm64
                 install: true
-            #- name: Build Docker image
-            #  uses: docker/build-push-action@v5
-            #  id: build
-            #  with:
-            #    push: true
-            #    platforms: linux/amd64, linux/arm64
-            #    tags: ${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }}
-            #    provenance: false
+            - name: Build Docker image
+              uses: docker/build-push-action@v5
+              id: build
+              with:
+                push: true
+                platforms: linux/amd64, linux/arm64
+                tags: ${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }}
+                provenance: false
 
             - name: docker build
               run: |  
