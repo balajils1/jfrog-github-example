@@ -20,7 +20,7 @@ jobs:
               shell: bash
               run: |
                 printenv
-                curl -v  https://registry-1.docker.io/v2/    
+                curl -v  https://kimt.jfrog.io/demo-docker-remote/v2/    
             # Use the specific setup-cli branch
             - name: Setup JFrog CLI
               uses: jfrog/setup-jfrog-cli@v4
