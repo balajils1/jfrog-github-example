@@ -12,7 +12,7 @@ jobs:
     build-publish-python:
         runs-on: ubuntu-latest
         env:
-          DOCKER_REPO: 'pruthvi-docker'
+          DOCKER_REPO: 'demo-docker-remote'
           IMAGE_NAME: 'library/nginx:latest'
           JF_URL: https://${{ secrets.JF_URL }}/
         steps:
@@ -28,7 +28,7 @@ jobs:
                 JF_URL: https://${{ secrets.JF_URL }}/
                 JF_PROJECT: 'jana'
               with:
-                  oidc-provider-name: jonny
+                  oidc-provider-name: github-balajil
                   oidc-audience: jfrog-github
 
             - name: Checkout the repository
